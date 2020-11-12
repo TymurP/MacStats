@@ -7,26 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F19F18724F9716600A34A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F19F18624F9716600A34A5C /* AppDelegate.swift */; };
-		4F19F18924F9716600A34A5C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F19F18824F9716600A34A5C /* ContentView.swift */; };
-		4F19F18B24F9716900A34A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F19F18A24F9716900A34A5C /* Assets.xcassets */; };
-		4F19F18E24F9716900A34A5C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F19F18D24F9716900A34A5C /* Preview Assets.xcassets */; };
-		4F19F19124F9716900A34A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F19F18F24F9716900A34A5C /* Main.storyboard */; };
+		4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEBF6255A64E8007E8A37 /* AppDelegate.swift */; };
+		4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEBF8255A64E8007E8A37 /* ContentView.swift */; };
+		4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */; };
+		4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */; };
+		4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFF255A64E9007E8A37 /* Main.storyboard */; };
+		4F4DEC1C255A6A83007E8A37 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEC1A255A6A83007E8A37 /* SMC.swift */; };
+		4F4DEC1D255A6A83007E8A37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEC1B255A6A83007E8A37 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F19F18324F9716600A34A5C /* MacStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F19F18624F9716600A34A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F19F18824F9716600A34A5C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4F19F18A24F9716900A34A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F19F18D24F9716900A34A5C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F19F19024F9716900A34A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4F19F19224F9716900A34A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F19F19324F9716900A34A5C /* MacStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacStats.entitlements; sourceTree = "<group>"; };
+		4F4DEBF3255A64E8007E8A37 /* MacStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4DEBF6255A64E8007E8A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F4DEBF8255A64E8007E8A37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F4DEC00255A64E9007E8A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F4DEC02255A64E9007E8A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F4DEC03255A64E9007E8A37 /* MacStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacStats.entitlements; sourceTree = "<group>"; };
+		4F4DEC19255A6A83007E8A37 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
+		4F4DEC1A255A6A83007E8A37 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		4F4DEC1B255A6A83007E8A37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F19F18024F9716600A34A5C /* Frameworks */ = {
+		4F4DEBF0255A64E8007E8A37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,54 +41,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F19F17A24F9716600A34A5C = {
+		4F4DEBEA255A64E8007E8A37 = {
 			isa = PBXGroup;
 			children = (
-				4F19F18524F9716600A34A5C /* MacStats */,
-				4F19F18424F9716600A34A5C /* Products */,
+				4F4DEC0A255A64F9007E8A37 /* libs */,
+				4F4DEBF5255A64E8007E8A37 /* MacStats */,
+				4F4DEBF4255A64E8007E8A37 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F19F18424F9716600A34A5C /* Products */ = {
+		4F4DEBF4255A64E8007E8A37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F19F18324F9716600A34A5C /* MacStats.app */,
+				4F4DEBF3255A64E8007E8A37 /* MacStats.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F19F18524F9716600A34A5C /* MacStats */ = {
+		4F4DEBF5255A64E8007E8A37 /* MacStats */ = {
 			isa = PBXGroup;
 			children = (
-				4F19F18624F9716600A34A5C /* AppDelegate.swift */,
-				4F19F18824F9716600A34A5C /* ContentView.swift */,
-				4F19F18A24F9716900A34A5C /* Assets.xcassets */,
-				4F19F18F24F9716900A34A5C /* Main.storyboard */,
-				4F19F19224F9716900A34A5C /* Info.plist */,
-				4F19F19324F9716900A34A5C /* MacStats.entitlements */,
-				4F19F18C24F9716900A34A5C /* Preview Content */,
+				4F4DEBF6255A64E8007E8A37 /* AppDelegate.swift */,
+				4F4DEBF8255A64E8007E8A37 /* ContentView.swift */,
+				4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */,
+				4F4DEBFF255A64E9007E8A37 /* Main.storyboard */,
+				4F4DEC02255A64E9007E8A37 /* Info.plist */,
+				4F4DEC03255A64E9007E8A37 /* MacStats.entitlements */,
+				4F4DEBFC255A64E9007E8A37 /* Preview Content */,
 			);
 			path = MacStats;
 			sourceTree = "<group>";
 		};
-		4F19F18C24F9716900A34A5C /* Preview Content */ = {
+		4F4DEBFC255A64E9007E8A37 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4F19F18D24F9716900A34A5C /* Preview Assets.xcassets */,
+				4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F4DEC0A255A64F9007E8A37 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DEC18255A6A83007E8A37 /* SMCKit */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		4F4DEC18255A6A83007E8A37 /* SMCKit */ = {
+			isa = PBXGroup;
+			children = (
+				4F4DEC19255A6A83007E8A37 /* SMCKit.h */,
+				4F4DEC1A255A6A83007E8A37 /* SMC.swift */,
+				4F4DEC1B255A6A83007E8A37 /* Info.plist */,
+			);
+			name = SMCKit;
+			path = ../../SMCKit/SMCKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F19F18224F9716600A34A5C /* MacStats */ = {
+		4F4DEBF2255A64E8007E8A37 /* MacStats */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F19F19624F9716900A34A5C /* Build configuration list for PBXNativeTarget "MacStats" */;
+			buildConfigurationList = 4F4DEC06255A64E9007E8A37 /* Build configuration list for PBXNativeTarget "MacStats" */;
 			buildPhases = (
-				4F19F17F24F9716600A34A5C /* Sources */,
-				4F19F18024F9716600A34A5C /* Frameworks */,
-				4F19F18124F9716600A34A5C /* Resources */,
+				4F4DEBEF255A64E8007E8A37 /* Sources */,
+				4F4DEBF0255A64E8007E8A37 /* Frameworks */,
+				4F4DEBF1255A64E8007E8A37 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -91,25 +116,24 @@
 			);
 			name = MacStats;
 			productName = MacStats;
-			productReference = 4F19F18324F9716600A34A5C /* MacStats.app */;
+			productReference = 4F4DEBF3255A64E8007E8A37 /* MacStats.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F19F17B24F9716600A34A5C /* Project object */ = {
+		4F4DEBEB255A64E8007E8A37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
-				ORGANIZATIONNAME = "Tymur Pysarevych";
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					4F19F18224F9716600A34A5C = {
-						CreatedOnToolsVersion = 11.6;
+					4F4DEBF2255A64E8007E8A37 = {
+						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F19F17E24F9716600A34A5C /* Build configuration list for PBXProject "MacStats" */;
+			buildConfigurationList = 4F4DEBEE255A64E8007E8A37 /* Build configuration list for PBXProject "MacStats" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,46 +141,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F19F17A24F9716600A34A5C;
-			productRefGroup = 4F19F18424F9716600A34A5C /* Products */;
+			mainGroup = 4F4DEBEA255A64E8007E8A37;
+			productRefGroup = 4F4DEBF4255A64E8007E8A37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F19F18224F9716600A34A5C /* MacStats */,
+				4F4DEBF2255A64E8007E8A37 /* MacStats */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F19F18124F9716600A34A5C /* Resources */ = {
+		4F4DEBF1255A64E8007E8A37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F19F19124F9716900A34A5C /* Main.storyboard in Resources */,
-				4F19F18E24F9716900A34A5C /* Preview Assets.xcassets in Resources */,
-				4F19F18B24F9716900A34A5C /* Assets.xcassets in Resources */,
+				4F4DEC1D255A6A83007E8A37 /* Info.plist in Resources */,
+				4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */,
+				4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */,
+				4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F19F17F24F9716600A34A5C /* Sources */ = {
+		4F4DEBEF255A64E8007E8A37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F19F18924F9716600A34A5C /* ContentView.swift in Sources */,
-				4F19F18724F9716600A34A5C /* AppDelegate.swift in Sources */,
+				4F4DEC1C255A6A83007E8A37 /* SMC.swift in Sources */,
+				4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */,
+				4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4F19F18F24F9716900A34A5C /* Main.storyboard */ = {
+		4F4DEBFF255A64E9007E8A37 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4F19F19024F9716900A34A5C /* Base */,
+				4F4DEC00255A64E9007E8A37 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -164,7 +190,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4F19F19424F9716900A34A5C /* Debug */ = {
+		4F4DEC04255A64E9007E8A37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,6 +216,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -224,7 +251,7 @@
 			};
 			name = Debug;
 		};
-		4F19F19524F9716900A34A5C /* Release */ = {
+		4F4DEC05255A64E9007E8A37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,6 +277,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -277,10 +305,11 @@
 			};
 			name = Release;
 		};
-		4F19F19724F9716900A34A5C /* Debug */ = {
+		4F4DEC07255A64E9007E8A37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -294,17 +323,17 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tp.MacStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		4F19F19824F9716900A34A5C /* Release */ = {
+		4F4DEC08255A64E9007E8A37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -318,7 +347,6 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tp.MacStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -328,25 +356,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F19F17E24F9716600A34A5C /* Build configuration list for PBXProject "MacStats" */ = {
+		4F4DEBEE255A64E8007E8A37 /* Build configuration list for PBXProject "MacStats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F19F19424F9716900A34A5C /* Debug */,
-				4F19F19524F9716900A34A5C /* Release */,
+				4F4DEC04255A64E9007E8A37 /* Debug */,
+				4F4DEC05255A64E9007E8A37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F19F19624F9716900A34A5C /* Build configuration list for PBXNativeTarget "MacStats" */ = {
+		4F4DEC06255A64E9007E8A37 /* Build configuration list for PBXNativeTarget "MacStats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F19F19724F9716900A34A5C /* Debug */,
-				4F19F19824F9716900A34A5C /* Release */,
+				4F4DEC07255A64E9007E8A37 /* Debug */,
+				4F4DEC08255A64E9007E8A37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4F19F17B24F9716600A34A5C /* Project object */;
+	rootObject = 4F4DEBEB255A64E8007E8A37 /* Project object */;
 }

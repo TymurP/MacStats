@@ -12,8 +12,8 @@
 		4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */; };
 		4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */; };
 		4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFF255A64E9007E8A37 /* Main.storyboard */; };
-		4F4DEC1C255A6A83007E8A37 /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4DEC1A255A6A83007E8A37 /* SMC.swift */; };
-		4F4DEC1D255A6A83007E8A37 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEC1B255A6A83007E8A37 /* Info.plist */; };
+		4FE2C482255D8EC40011857F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2C480255D8EC40011857F /* SMC.swift */; };
+		4FE2C483255D8EC40011857F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2C481255D8EC40011857F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +25,9 @@
 		4F4DEC00255A64E9007E8A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F4DEC02255A64E9007E8A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4DEC03255A64E9007E8A37 /* MacStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacStats.entitlements; sourceTree = "<group>"; };
-		4F4DEC19255A6A83007E8A37 /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
-		4F4DEC1A255A6A83007E8A37 /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
-		4F4DEC1B255A6A83007E8A37 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE2C47F255D8EC40011857F /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
+		4FE2C480255D8EC40011857F /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		4FE2C481255D8EC40011857F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,20 +83,19 @@
 		4F4DEC0A255A64F9007E8A37 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				4F4DEC18255A6A83007E8A37 /* SMCKit */,
+				4FE2C47E255D8EC40011857F /* SMCKit */,
 			);
 			path = libs;
 			sourceTree = "<group>";
 		};
-		4F4DEC18255A6A83007E8A37 /* SMCKit */ = {
+		4FE2C47E255D8EC40011857F /* SMCKit */ = {
 			isa = PBXGroup;
 			children = (
-				4F4DEC19255A6A83007E8A37 /* SMCKit.h */,
-				4F4DEC1A255A6A83007E8A37 /* SMC.swift */,
-				4F4DEC1B255A6A83007E8A37 /* Info.plist */,
+				4FE2C47F255D8EC40011857F /* SMCKit.h */,
+				4FE2C480255D8EC40011857F /* SMC.swift */,
+				4FE2C481255D8EC40011857F /* Info.plist */,
 			);
-			name = SMCKit;
-			path = ../../SMCKit/SMCKit;
+			path = SMCKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4DEC1D255A6A83007E8A37 /* Info.plist in Resources */,
+				4FE2C483255D8EC40011857F /* Info.plist in Resources */,
 				4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */,
 				4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */,
 				4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */,
@@ -170,7 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4DEC1C255A6A83007E8A37 /* SMC.swift in Sources */,
+				4FE2C482255D8EC40011857F /* SMC.swift in Sources */,
 				4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */,
 				4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */,
 			);

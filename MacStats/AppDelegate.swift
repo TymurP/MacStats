@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
     var menu: NSMenu!
+    var timer: Timer?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         var hasSMC = false
@@ -22,16 +23,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             try SMCKit.open()
             hasSMC = true
         } catch { hasSMC = false}
+        if !hasSMC { return }
         
-        if !hasSMC {
-            return
-        }
-        let contentView = ContentView()
-        constructPopover(contentView)
-        constructMenu()
+        constructPopover()
     }
     
-    func constructPopover(_ contentView: ContentView) {
+    private func constructPopover() {
+        let contentView = ContentView()
         let popover = NSPopover()
         popover.contentSize = NSSize(width: 400, height: 500)
         popover.behavior = .transient
@@ -46,14 +44,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusBarItem.button?.image?.isTemplate = true
         self.statusBarItem.button?.action = #selector(self.statusBarButtonClicked(sender:))
         self.statusBarItem.button?.sendAction(on: [.leftMouseUp, .rightMouseUp])
+        constructMenu()
     }
     
-    func constructMenu() {
+    private func constructMenu() {
         self.menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
     }
     
-    @objc func statusBarButtonClicked(sender: NSStatusBarButton) {
+    @objc private func statusBarButtonClicked(sender: NSStatusBarButton) {
         let event = NSApp.currentEvent!
         if self.popover.isShown {
             self.popover.performClose(sender)

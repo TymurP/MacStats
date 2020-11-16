@@ -12,6 +12,8 @@
 		4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */; };
 		4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */; };
 		4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFF255A64E9007E8A37 /* Main.storyboard */; };
+		4F7A7167255EDDB4008C6511 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* Badge.swift */; };
+		4F7A717525613B7A008C6511 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A717425613B7A008C6511 /* Utils.swift */; };
 		4FE2C482255D8EC40011857F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2C480255D8EC40011857F /* SMC.swift */; };
 		4FE2C483255D8EC40011857F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2C481255D8EC40011857F /* Info.plist */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,8 @@
 		4F4DEC00255A64E9007E8A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F4DEC02255A64E9007E8A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4DEC03255A64E9007E8A37 /* MacStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacStats.entitlements; sourceTree = "<group>"; };
+		4F7A7166255EDDB4008C6511 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		4F7A717425613B7A008C6511 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4FE2C47F255D8EC40011857F /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
 		4FE2C480255D8EC40011857F /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
 		4FE2C481255D8EC40011857F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +65,7 @@
 		4F4DEBF5255A64E8007E8A37 /* MacStats */ = {
 			isa = PBXGroup;
 			children = (
+				4F7A7144255D98C7008C6511 /* module */,
 				4F4DEBF6255A64E8007E8A37 /* AppDelegate.swift */,
 				4F4DEBF8255A64E8007E8A37 /* ContentView.swift */,
 				4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */,
@@ -86,6 +91,31 @@
 				4FE2C47E255D8EC40011857F /* SMCKit */,
 			);
 			path = libs;
+			sourceTree = "<group>";
+		};
+		4F7A7144255D98C7008C6511 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				4F7A717325613B64008C6511 /* utils */,
+				4F7A7161255EDC7B008C6511 /* cpu */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		4F7A7161255EDC7B008C6511 /* cpu */ = {
+			isa = PBXGroup;
+			children = (
+				4F7A7166255EDDB4008C6511 /* Badge.swift */,
+			);
+			path = cpu;
+			sourceTree = "<group>";
+		};
+		4F7A717325613B64008C6511 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4F7A717425613B7A008C6511 /* Utils.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 		4FE2C47E255D8EC40011857F /* SMCKit */ = {
@@ -169,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7A717525613B7A008C6511 /* Utils.swift in Sources */,
+				4F7A7167255EDDB4008C6511 /* Badge.swift in Sources */,
 				4FE2C482255D8EC40011857F /* SMC.swift in Sources */,
 				4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */,
 				4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */,
@@ -240,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -295,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

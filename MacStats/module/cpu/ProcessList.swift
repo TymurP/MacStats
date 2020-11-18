@@ -14,25 +14,25 @@ struct ProcessList: View {
     //  MARK: BUILD UI
     //-------------------------------------
     var body: some View {
-            ScrollView(.vertical) {
-                VStack {
-                    ForEach(processes) { proc in
-                        VStack {
-                            Text("\(proc.name)").font(.title)
-                            Divider()
-                            HStack(alignment: .top) {
-                                Text("Process ID: \(proc.pid)").font(.subheadline)
-                                Spacer()
-                                Text("CPU usage: \(proc.usage.trim(f: ".2"))").font(.subheadline)
-                            }
+        ScrollView(.vertical) {
+            VStack {
+                ForEach(processes) { proc in
+                    VStack {
+                        Text("\(proc.name)").font(.title)
+                        Divider()
+                        HStack(alignment: .top) {
+                            Text("Process ID: \(proc.pid)").font(.subheadline)
+                            Spacer()
+                            Text("CPU usage: \(proc.usage.trim(f: ".2"))").font(.subheadline)
                         }
-                        .padding()
                     }
-                }.onReceive(Utils.TIMER) { _ in
-                    DispatchQueue.global().async {
-                        self.processes = self.getTopProcesses()
-                    }
+                    .padding()
                 }
+            }.onReceive(Utils.TIMER) { _ in
+                DispatchQueue.global().async {
+                    self.processes = self.getTopProcesses()
+                }
+            }
         }
     }
     

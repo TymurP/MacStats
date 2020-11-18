@@ -15,9 +15,10 @@ struct ContentView: View {
     var body: some View {
         Group {
             TabView() {
-                HStack {
+                VStack {
                     CPUBadge()
-                    VSplitView{}.frame(width: 1.0)
+                        .offset(y: -10)
+                        .padding(.bottom, -20)
                     ProcessList()
                 }
                 .tabItem { Text("CPU") }.tag(1)

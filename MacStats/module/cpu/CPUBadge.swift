@@ -11,7 +11,7 @@ struct CPUBadge: View {
     //-------------------------------------
     //  MARK: VARIABLES
     //-------------------------------------
-    @State var dynamicSize: CGFloat = 300
+    @State var dynamicSize: CGFloat = 200
     @State var gradient: CGFloat = 0
     @State var cpuUsage: CGFloat = 0
     
@@ -32,30 +32,18 @@ struct CPUBadge: View {
                     startPoint: .top,
                     endPoint: .bottom
                 ))
-                .frame(width: dynamicSize, height: dynamicSize)
-                .overlay(GeometryReader{ geometry in
-                    Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(stops: [
-                                .init(color: Self.gradientStart, location: gradient),
-                                .init(color: Self.gradientEnd, location: 1)
-                            ]),
-                            startPoint: .top,
-                            endPoint: .bottom
-                        ))
-                        .edgesIgnoringSafeArea(.all)
-                        .onReceive(Utils.TIMER) { _ in
-                            DispatchQueue.global().async {
-                                let usage = Utils.system.usageCPU()
-                                self.cpuUsage = CGFloat(usage.user + usage.system)
-                                self.gradient = self.cpuUsage / 100
-                            }
-                        }
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                }).padding(.all)
+                .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                .onReceive(Utils.TIMER) { _ in
+                    DispatchQueue.global().async {
+                        let usage = Utils.system.usageCPU()
+                        self.cpuUsage = CGFloat(usage.user + usage.system)
+                        self.gradient = self.cpuUsage / 100
+                    }
+                }.frame(width: dynamicSize, height: dynamicSize)
+                .padding(.all)
             Text("\(self.cpuUsage.trim()) %")
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .font(.system(size: 90, design: .rounded))
+                .font(.system(size: 60, design: .rounded))
                 .fixedSize(horizontal: true, vertical: true)
                 .multilineTextAlignment(.center)
                 .padding()

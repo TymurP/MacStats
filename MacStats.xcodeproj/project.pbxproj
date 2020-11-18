@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,16 @@
 		4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFA255A64E9007E8A37 /* Assets.xcassets */; };
 		4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFD255A64E9007E8A37 /* Preview Assets.xcassets */; };
 		4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4DEBFF255A64E9007E8A37 /* Main.storyboard */; };
-		4F7A7167255EDDB4008C6511 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* Badge.swift */; };
+		4F5866602562E0BC00C529B7 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58665A2562E0BC00C529B7 /* Process.swift */; };
+		4F5866612562E0BC00C529B7 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58665C2562E0BC00C529B7 /* System.swift */; };
+		4F5866622562E0BC00C529B7 /* Battery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58665D2562E0BC00C529B7 /* Battery.swift */; };
+		4F5866642562E0BC00C529B7 /* IOReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58665F2562E0BC00C529B7 /* IOReturn.swift */; };
+		4F58667425642EF700C529B7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58667325642EF700C529B7 /* Helpers.swift */; };
+		4F58667725642F4500C529B7 /* ProcessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58667625642F4500C529B7 /* ProcessList.swift */; };
+		4F5866A025657CDC00C529B7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4F58669F25657CDC00C529B7 /* .gitignore */; };
+		4F7A7167255EDDB4008C6511 /* CPUBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* CPUBadge.swift */; };
 		4F7A717525613B7A008C6511 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A717425613B7A008C6511 /* Utils.swift */; };
 		4FE2C482255D8EC40011857F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2C480255D8EC40011857F /* SMC.swift */; };
-		4FE2C483255D8EC40011857F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FE2C481255D8EC40011857F /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +33,18 @@
 		4F4DEC00255A64E9007E8A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F4DEC02255A64E9007E8A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F4DEC03255A64E9007E8A37 /* MacStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacStats.entitlements; sourceTree = "<group>"; };
-		4F7A7166255EDDB4008C6511 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		4F58665A2562E0BC00C529B7 /* Process.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
+		4F58665B2562E0BC00C529B7 /* SystemKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemKit.h; sourceTree = "<group>"; };
+		4F58665C2562E0BC00C529B7 /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		4F58665D2562E0BC00C529B7 /* Battery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battery.swift; sourceTree = "<group>"; };
+		4F58665F2562E0BC00C529B7 /* IOReturn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOReturn.swift; sourceTree = "<group>"; };
+		4F58667325642EF700C529B7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		4F58667625642F4500C529B7 /* ProcessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessList.swift; sourceTree = "<group>"; };
+		4F58669F25657CDC00C529B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4F7A7166255EDDB4008C6511 /* CPUBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUBadge.swift; sourceTree = "<group>"; };
 		4F7A717425613B7A008C6511 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4FE2C47F255D8EC40011857F /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
 		4FE2C480255D8EC40011857F /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
-		4FE2C481255D8EC40011857F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +61,7 @@
 		4F4DEBEA255A64E8007E8A37 = {
 			isa = PBXGroup;
 			children = (
+				4F58669F25657CDC00C529B7 /* .gitignore */,
 				4F4DEC0A255A64F9007E8A37 /* libs */,
 				4F4DEBF5255A64E8007E8A37 /* MacStats */,
 				4F4DEBF4255A64E8007E8A37 /* Products */,
@@ -88,9 +102,22 @@
 		4F4DEC0A255A64F9007E8A37 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				4F5866592562E0BC00C529B7 /* SystemKit */,
 				4FE2C47E255D8EC40011857F /* SMCKit */,
 			);
 			path = libs;
+			sourceTree = "<group>";
+		};
+		4F5866592562E0BC00C529B7 /* SystemKit */ = {
+			isa = PBXGroup;
+			children = (
+				4F58665A2562E0BC00C529B7 /* Process.swift */,
+				4F58665B2562E0BC00C529B7 /* SystemKit.h */,
+				4F58665C2562E0BC00C529B7 /* System.swift */,
+				4F58665D2562E0BC00C529B7 /* Battery.swift */,
+				4F58665F2562E0BC00C529B7 /* IOReturn.swift */,
+			);
+			path = SystemKit;
 			sourceTree = "<group>";
 		};
 		4F7A7144255D98C7008C6511 /* module */ = {
@@ -105,7 +132,8 @@
 		4F7A7161255EDC7B008C6511 /* cpu */ = {
 			isa = PBXGroup;
 			children = (
-				4F7A7166255EDDB4008C6511 /* Badge.swift */,
+				4F7A7166255EDDB4008C6511 /* CPUBadge.swift */,
+				4F58667625642F4500C529B7 /* ProcessList.swift */,
 			);
 			path = cpu;
 			sourceTree = "<group>";
@@ -114,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				4F7A717425613B7A008C6511 /* Utils.swift */,
+				4F58667325642EF700C529B7 /* Helpers.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -123,7 +152,6 @@
 			children = (
 				4FE2C47F255D8EC40011857F /* SMCKit.h */,
 				4FE2C480255D8EC40011857F /* SMC.swift */,
-				4FE2C481255D8EC40011857F /* Info.plist */,
 			);
 			path = SMCKit;
 			sourceTree = "<group>";
@@ -163,7 +191,7 @@
 				};
 			};
 			buildConfigurationList = 4F4DEBEE255A64E8007E8A37 /* Build configuration list for PBXProject "MacStats" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -185,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE2C483255D8EC40011857F /* Info.plist in Resources */,
+				4F5866A025657CDC00C529B7 /* .gitignore in Resources */,
 				4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */,
 				4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */,
 				4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */,
@@ -200,10 +228,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7A717525613B7A008C6511 /* Utils.swift in Sources */,
-				4F7A7167255EDDB4008C6511 /* Badge.swift in Sources */,
+				4F5866612562E0BC00C529B7 /* System.swift in Sources */,
+				4F7A7167255EDDB4008C6511 /* CPUBadge.swift in Sources */,
+				4F58667425642EF700C529B7 /* Helpers.swift in Sources */,
+				4F5866622562E0BC00C529B7 /* Battery.swift in Sources */,
 				4FE2C482255D8EC40011857F /* SMC.swift in Sources */,
 				4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */,
+				4F5866642562E0BC00C529B7 /* IOReturn.swift in Sources */,
 				4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */,
+				4F58667725642F4500C529B7 /* ProcessList.swift in Sources */,
+				4F5866602562E0BC00C529B7 /* Process.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +373,9 @@
 		4F4DEC07255A64E9007E8A37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacStats/Preview Content\"";
@@ -364,10 +397,9 @@
 		4F4DEC08255A64E9007E8A37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"MacStats/Preview Content\"";

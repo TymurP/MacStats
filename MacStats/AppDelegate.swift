@@ -22,9 +22,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         do {
             try SMCKit.open()
             hasSMC = true
-        } catch { hasSMC = false}
+        } catch {
+            hasSMC = false
+            Utils.handleError(msg: "SMC is not available")
+        }
         if !hasSMC { return }
-        
+        Utils.getSensors()
         constructPopover()
     }
     
@@ -75,6 +78,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        SMCKit.close()
     }
 }

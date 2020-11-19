@@ -17,16 +17,16 @@ struct ProcessList: View {
         ScrollView(.vertical) {
             VStack {
                 ForEach(processes) { proc in
-                    VStack {
-                        Text("\(proc.name)").font(.title)
+                    VStack(alignment: .leading) {
+                        Text("\(proc.name)").font(.headline)
                         Divider()
                         HStack(alignment: .top) {
                             Text("Process ID: \(proc.pid)").font(.subheadline)
                             Spacer()
-                            Text("CPU usage: \(proc.usage.trim(f: ".2"))").font(.subheadline)
+                            Text("CPU usage: \(proc.usage.trim(f: ".2"))%").font(.subheadline)
                         }
                     }
-                    .padding()
+                    .padding(.all)
                 }
             }.onReceive(Utils.TIMER) { _ in
                 DispatchQueue.global().async {

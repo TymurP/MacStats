@@ -22,33 +22,36 @@ struct CPUBadge: View {
     //  MARK: BUILD UI
     //-------------------------------------
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(LinearGradient(
-                    gradient: Gradient(stops: [
-                        .init(color: Self.gradientStart, location: gradient),
-                        .init(color: Self.gradientEnd, location: 1)
-                    ]),
-                    startPoint: .top,
-                    endPoint: .bottom
-                ))
-                .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                .onReceive(Utils.TIMER) { _ in
-                    DispatchQueue.global().async {
-                        let usage = Utils.system.usageCPU()
-                        self.cpuUsage = CGFloat(usage.user + usage.system)
-                        self.gradient = self.cpuUsage / 100
-                    }
-                }.frame(width: dynamicSize, height: dynamicSize)
-                .padding(.all)
-            Text("\(self.cpuUsage.trim()) %")
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .font(.system(size: 60, design: .rounded))
-                .fixedSize(horizontal: true, vertical: true)
-                .multilineTextAlignment(.center)
-                .padding()
-                .frame(width: 300, height: 200)
-                .foregroundColor(.white)
+        GeometryReader { geo in
+            ZStack {
+                Rectangle()
+                    .fill(LinearGradient(
+                        gradient: Gradient(stops: [
+                            .init(color: Self.gradientStart, location: gradient),
+                            .init(color: Self.gradientEnd, location: 1)
+                        ]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+                    .overlay(Rectangle().stroke(Color.white, lineWidth: 2))
+                    .onReceive(Utils.TIMER) { _ in
+                        DispatchQueue.global().async {
+                            let usage = Utils.system.usageCPU()
+                            self.cpuUsage = CGFloat(usage.user + usage.system)
+                            self.gradient = self.cpuUsage / 100
+                        }
+                    }.frame(width: geo.size.width, height: dynamicSize)
+                    .padding(.all)
+                Text("\(self.cpuUsage.trim())%")
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .font(.system(size: 60, design: .rounded))
+                    .fixedSize(horizontal: true, vertical: true)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                    .frame(width: 300, height: 200)
+                    .foregroundColor(.white)
+            }
         }
+        
     }
 }

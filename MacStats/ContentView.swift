@@ -17,8 +17,8 @@ struct ContentView: View {
             TabView() {
                 VStack {
                     CPUBadge()
-                        .offset(y: -10)
-                        .padding(.bottom, -20)
+                        .offset(y: -20)
+                        .padding(.bottom, -40)
                     ProcessList()
                 }
                 .tabItem { Text("CPU") }.tag(1)
@@ -37,7 +37,7 @@ struct ContentView: View {
             }
             .frame(width: 600.0, height: 500.0)
             .padding(.top)
-        }
+        }.animation(Animation.easeIn)
     }
 }
 

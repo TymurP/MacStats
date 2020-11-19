@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CPUBadge: View {
+struct CPUHeatView: View {
     //-------------------------------------
     //  MARK: VARIABLES
     //-------------------------------------
@@ -52,6 +52,5 @@ struct CPUBadge: View {
                     .foregroundColor(.white)
             }
         }
-        
     }
 }

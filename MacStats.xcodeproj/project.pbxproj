@@ -19,7 +19,8 @@
 		4F58667425642EF700C529B7 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58667325642EF700C529B7 /* Helpers.swift */; };
 		4F58667725642F4500C529B7 /* ProcessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58667625642F4500C529B7 /* ProcessList.swift */; };
 		4F5866A025657CDC00C529B7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4F58669F25657CDC00C529B7 /* .gitignore */; };
-		4F7A7167255EDDB4008C6511 /* CPUBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* CPUBadge.swift */; };
+		4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5866A42566D8BE00C529B7 /* TemperatureView.swift */; };
+		4F7A7167255EDDB4008C6511 /* CPUHeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */; };
 		4F7A717525613B7A008C6511 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A717425613B7A008C6511 /* Utils.swift */; };
 		4FE2C482255D8EC40011857F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2C480255D8EC40011857F /* SMC.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +42,8 @@
 		4F58667325642EF700C529B7 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		4F58667625642F4500C529B7 /* ProcessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessList.swift; sourceTree = "<group>"; };
 		4F58669F25657CDC00C529B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		4F7A7166255EDDB4008C6511 /* CPUBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUBadge.swift; sourceTree = "<group>"; };
+		4F5866A42566D8BE00C529B7 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUHeatView.swift; sourceTree = "<group>"; };
 		4F7A717425613B7A008C6511 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4FE2C47F255D8EC40011857F /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
 		4FE2C480255D8EC40011857F /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
@@ -120,9 +122,18 @@
 			path = SystemKit;
 			sourceTree = "<group>";
 		};
+		4F5866A32566D89C00C529B7 /* fan */ = {
+			isa = PBXGroup;
+			children = (
+				4F5866A42566D8BE00C529B7 /* TemperatureView.swift */,
+			);
+			path = fan;
+			sourceTree = "<group>";
+		};
 		4F7A7144255D98C7008C6511 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				4F5866A32566D89C00C529B7 /* fan */,
 				4F7A717325613B64008C6511 /* utils */,
 				4F7A7161255EDC7B008C6511 /* cpu */,
 			);
@@ -132,7 +143,7 @@
 		4F7A7161255EDC7B008C6511 /* cpu */ = {
 			isa = PBXGroup;
 			children = (
-				4F7A7166255EDDB4008C6511 /* CPUBadge.swift */,
+				4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */,
 				4F58667625642F4500C529B7 /* ProcessList.swift */,
 			);
 			path = cpu;
@@ -227,9 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */,
 				4F7A717525613B7A008C6511 /* Utils.swift in Sources */,
 				4F5866612562E0BC00C529B7 /* System.swift in Sources */,
-				4F7A7167255EDDB4008C6511 /* CPUBadge.swift in Sources */,
+				4F7A7167255EDDB4008C6511 /* CPUHeatView.swift in Sources */,
 				4F58667425642EF700C529B7 /* Helpers.swift in Sources */,
 				4F5866622562E0BC00C529B7 /* Battery.swift in Sources */,
 				4FE2C482255D8EC40011857F /* SMC.swift in Sources */,

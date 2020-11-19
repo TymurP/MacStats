@@ -16,23 +16,17 @@ struct ContentView: View {
         Group {
             TabView() {
                 VStack {
-                    CPUBadge()
+                    CPUHeatView()
                         .offset(y: -20)
                         .padding(.bottom, -40)
                     ProcessList()
                 }
                 .tabItem { Text("CPU") }.tag(1)
                 
-                HStack {
-                    /*var heatSum: CGFloat = 0
-                     do {
-                     for sensor in Utils.tempSensors {
-                     let temp = CGFloat(try SMCKit.temperature(sensor.code, unit: TemperatureUnit.celius))
-                     heatSum = heatSum + temp
-                     }
-                     } catch { print("Error in: CPU -> Sensors") }
-                     
-                     self.gradient = getGradient(heatSum: (heatSum / CGFloat(Utils.tempSensors.count)))*/
+                VStack {
+                    FanView()
+                        .offset(y: -20)
+                        .padding(.bottom, -40)
                 }.tabItem { Text("Fans") }.tag(2)
             }
             .frame(width: 600.0, height: 500.0)

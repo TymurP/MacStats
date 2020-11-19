@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProcessList: View {
-    @State var processes: ArraySlice<TopProcess> = [TopProcess(pid: 0, command: "", name: "", usage: 0, icon: nil)]
+    @State var processes: ArraySlice<TopProcess> = [TopProcess(pid: 0, command: "", name: "", usage: 0, icon:  #imageLiteral(resourceName: "ProcessDefaultImage"))]
     
     //-------------------------------------
     //  MARK: BUILD UI
@@ -17,13 +17,16 @@ struct ProcessList: View {
         ScrollView(.vertical) {
             VStack {
                 ForEach(processes) { proc in
-                    VStack(alignment: .leading) {
-                        Text("\(proc.name)").font(.headline)
-                        Divider()
-                        HStack(alignment: .top) {
-                            Text("Process ID: \(proc.pid)").font(.subheadline)
-                            Spacer()
-                            Text("CPU usage: \(proc.usage.trim(f: ".2"))%").font(.subheadline)
+                    HStack {
+                        Image(nsImage: proc.icon)
+                        VStack(alignment: .leading) {
+                            Text("\(proc.name)").font(.headline)
+                            Divider()
+                            HStack(alignment: .top) {
+                                Text("Process ID: \(proc.pid)").font(.subheadline)
+                                Spacer()
+                                Text("CPU usage: \(proc.usage.trim(f: ".2"))%").font(.subheadline)
+                            }
                         }
                     }
                     .padding(.all)
@@ -77,14 +80,14 @@ struct ProcessList: View {
                 let pid = Int(pidString) ?? 0
                 let usage = Double(usageString.replacingOccurrences(of: ",", with: ".")) ?? 0
                 
-                var name: String = ""
-                var icon: NSImage? = nil
+                var name: String = command
+                var icon: NSImage = #imageLiteral(resourceName: "ProcessDefaultImage")
                 let app = NSRunningApplication(processIdentifier: pid_t(pid))
                 if (app != nil && app?.localizedName != "") {
                     name = (app?.localizedName)!
-                    icon = app?.icon
-                } else {
-                    name = command
+                }
+                if(app != nil && app?.icon != nil){
+                    icon = (app?.icon)!
                 }
                 
                 processes.append(TopProcess(pid: pid, command: command, name: name, usage: usage, icon: icon))

@@ -12,23 +12,16 @@ import os.log
 struct Utils {
         
     static let TIMER = Timer.publish(every: 2, on: .current, in: .common).autoconnect()
-    static var tempSensors: [TemperatureSensor] = []
     static var system = System.init()
     
     @available(OSX 11.0, *)
     static let logger = Logger()
     
-    public static func getSensors() {
-        do {
-            tempSensors = try SMCKit.allKnownTemperatureSensors()
-        } catch { handleError(msg: "SMCKit error on .allKnownTemperatureSensors()") }
-    }
-    
     public static func handleError(msg: String) {
         if #available(OSX 11.0, *) {
             logger.error("Error: \(msg)")
         } else {
-            print()
+            print(msg)
         }
     }
 }

@@ -22,7 +22,6 @@ struct CPUHeatView: View {
     //  MARK: BUILD UI
     //-------------------------------------
     var body: some View {
-        GeometryReader { geo in
             ZStack {
                 Rectangle()
                     .fill(LinearGradient(
@@ -40,8 +39,7 @@ struct CPUHeatView: View {
                             self.cpuUsage = CGFloat(usage.user + usage.system)
                             self.gradient = self.cpuUsage / 100
                         }
-                    }.frame(width: geo.size.width, height: dynamicSize)
-                    .padding(.all)
+                    }.frame(width: 590, height: dynamicSize, alignment: .top)
                 Text("\(self.cpuUsage.trim())%")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .font(.system(size: 60, design: .rounded))
@@ -51,6 +49,5 @@ struct CPUHeatView: View {
                     .frame(width: 300, height: 200)
                     .foregroundColor(.white)
             }
-        }
     }
 }

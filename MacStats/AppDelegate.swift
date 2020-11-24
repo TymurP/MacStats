@@ -8,26 +8,16 @@
 import Cocoa
 import SwiftUI
 
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var popover: NSPopover!
     var statusBarItem: NSStatusItem!
     var menu: NSMenu!
-    var timer: Timer?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        var hasSMC = false
-        do {
-            try SMCKit.open()
-            hasSMC = true
-        } catch {
-            hasSMC = false
-            Utils.handleError(msg: "SMC is not available")
-        }
-        if !hasSMC { return }
-        Utils.getSensors()
+        SMC.open()
+        SMC.runAsRoot()
         constructPopover()
     }
     
@@ -78,6 +68,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
-        SMCKit.close()
+        SMC.close()
     }
 }

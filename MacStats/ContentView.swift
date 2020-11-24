@@ -17,21 +17,17 @@ struct ContentView: View {
             TabView() {
                 VStack {
                     CPUHeatView()
-                        .offset(y: -20)
-                        .padding(.bottom, -40)
+                    Divider()
                     ProcessList()
                 }
                 .tabItem { Text("CPU") }.tag(1)
-                
                 VStack {
-                    FanView()
-                        .offset(y: -20)
-                        .padding(.bottom, -40)
+                    TemperatureView()
                 }.tabItem { Text("Fans") }.tag(2)
             }
-            .frame(width: 600.0, height: 500.0)
+            .frame(width: 600.0, height: 500.0, alignment: .top)
             .padding(.top)
-        }.animation(Animation.easeIn)
+        }.animation(Animation.easeInOut)
     }
 }
 

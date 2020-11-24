@@ -22,7 +22,11 @@
 		4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5866A42566D8BE00C529B7 /* TemperatureView.swift */; };
 		4F7A7167255EDDB4008C6511 /* CPUHeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */; };
 		4F7A717525613B7A008C6511 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A717425613B7A008C6511 /* Utils.swift */; };
-		4FE2C482255D8EC40011857F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2C480255D8EC40011857F /* SMC.swift */; };
+		4FF00D29256AD74100F9BE4F /* smcBinary.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D28256AD74100F9BE4F /* smcBinary.c */; };
+		4FF00D2C256AEF3100F9BE4F /* SMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D2B256AEF3100F9BE4F /* SMC.swift */; };
+		4FF00D36256D35D100F9BE4F /* MachineDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D35256D35D100F9BE4F /* MachineDefaults.m */; };
+		4FF00D3A256D43EE00F9BE4F /* DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D39256D43EE00F9BE4F /* DirectoryLocations.m */; };
+		4FF00D41256D4CFB00F9BE4F /* smcWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D40256D4CFB00F9BE4F /* smcWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +49,16 @@
 		4F5866A42566D8BE00C529B7 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUHeatView.swift; sourceTree = "<group>"; };
 		4F7A717425613B7A008C6511 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		4FE2C47F255D8EC40011857F /* SMCKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCKit.h; sourceTree = "<group>"; };
-		4FE2C480255D8EC40011857F /* SMC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		4FF00D26256AD74100F9BE4F /* MacStats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacStats-Bridging-Header.h"; sourceTree = "<group>"; };
+		4FF00D27256AD74100F9BE4F /* smcBinary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smcBinary.h; sourceTree = "<group>"; };
+		4FF00D28256AD74100F9BE4F /* smcBinary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = smcBinary.c; sourceTree = "<group>"; };
+		4FF00D2B256AEF3100F9BE4F /* SMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMC.swift; sourceTree = "<group>"; };
+		4FF00D30256C1A5800F9BE4F /* smcWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smcWrapper.h; sourceTree = "<group>"; };
+		4FF00D34256D355E00F9BE4F /* MachineDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MachineDefaults.h; sourceTree = "<group>"; };
+		4FF00D35256D35D100F9BE4F /* MachineDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MachineDefaults.m; sourceTree = "<group>"; };
+		4FF00D38256D43E000F9BE4F /* DirectoryLocations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectoryLocations.h; sourceTree = "<group>"; };
+		4FF00D39256D43EE00F9BE4F /* DirectoryLocations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectoryLocations.m; sourceTree = "<group>"; };
+		4FF00D40256D4CFB00F9BE4F /* smcWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smcWrapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +116,8 @@
 		4F4DEC0A255A64F9007E8A37 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				4FF00D1F256AD2CF00F9BE4F /* SMC */,
 				4F5866592562E0BC00C529B7 /* SystemKit */,
-				4FE2C47E255D8EC40011857F /* SMCKit */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -158,13 +170,21 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		4FE2C47E255D8EC40011857F /* SMCKit */ = {
+		4FF00D1F256AD2CF00F9BE4F /* SMC */ = {
 			isa = PBXGroup;
 			children = (
-				4FE2C47F255D8EC40011857F /* SMCKit.h */,
-				4FE2C480255D8EC40011857F /* SMC.swift */,
+				4FF00D26256AD74100F9BE4F /* MacStats-Bridging-Header.h */,
+				4FF00D27256AD74100F9BE4F /* smcBinary.h */,
+				4FF00D28256AD74100F9BE4F /* smcBinary.c */,
+				4FF00D34256D355E00F9BE4F /* MachineDefaults.h */,
+				4FF00D35256D35D100F9BE4F /* MachineDefaults.m */,
+				4FF00D38256D43E000F9BE4F /* DirectoryLocations.h */,
+				4FF00D39256D43EE00F9BE4F /* DirectoryLocations.m */,
+				4FF00D30256C1A5800F9BE4F /* smcWrapper.h */,
+				4FF00D40256D4CFB00F9BE4F /* smcWrapper.m */,
+				4FF00D2B256AEF3100F9BE4F /* SMC.swift */,
 			);
-			path = SMCKit;
+			path = SMC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +218,7 @@
 				TargetAttributes = {
 					4F4DEBF2255A64E8007E8A37 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -238,18 +259,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF00D3A256D43EE00F9BE4F /* DirectoryLocations.m in Sources */,
 				4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */,
 				4F7A717525613B7A008C6511 /* Utils.swift in Sources */,
 				4F5866612562E0BC00C529B7 /* System.swift in Sources */,
+				4FF00D29256AD74100F9BE4F /* smcBinary.c in Sources */,
 				4F7A7167255EDDB4008C6511 /* CPUHeatView.swift in Sources */,
 				4F58667425642EF700C529B7 /* Helpers.swift in Sources */,
 				4F5866622562E0BC00C529B7 /* Battery.swift in Sources */,
-				4FE2C482255D8EC40011857F /* SMC.swift in Sources */,
 				4F4DEBF9255A64E8007E8A37 /* ContentView.swift in Sources */,
 				4F5866642562E0BC00C529B7 /* IOReturn.swift in Sources */,
 				4F4DEBF7255A64E8007E8A37 /* AppDelegate.swift in Sources */,
+				4FF00D41256D4CFB00F9BE4F /* smcWrapper.m in Sources */,
 				4F58667725642F4500C529B7 /* ProcessList.swift in Sources */,
+				4FF00D36256D35D100F9BE4F /* MachineDefaults.m in Sources */,
 				4F5866602562E0BC00C529B7 /* Process.swift in Sources */,
+				4FF00D2C256AEF3100F9BE4F /* SMC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -373,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -386,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +428,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = tp.MacStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "libs/SMC/MacStats-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -410,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MacStats/MacStats.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -426,6 +455,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = tp.MacStats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "libs/SMC/MacStats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

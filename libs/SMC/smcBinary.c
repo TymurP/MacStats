@@ -24,7 +24,7 @@ struct {
 int g_keyInfoCacheCount = 0;
 OSSpinLock g_keyInfoSpinLock = 0;
 
-kern_return_t SMCCall(int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure, io_connect_t conn);
+kern_return_t SMCCallConn(int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure, io_connect_t conn);
 
 #pragma mark C Helpers
 
@@ -114,7 +114,7 @@ kern_return_t SMCClose(io_connect_t conn)
     return IOServiceClose(conn);
 }
 
-kern_return_t SMCCall(int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure,io_connect_t conn)
+kern_return_t SMCCallConn(int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure, io_connect_t conn)
 {
     size_t   structureInputSize;
     size_t   structureOutputSize;
@@ -152,7 +152,7 @@ kern_return_t SMCGetKeyInfo(UInt32 key, SMCKeyData_keyInfo_t* keyInfo, io_connec
         inputStructure.key = key;
         inputStructure.data8 = SMC_CMD_READ_KEYINFO;
         
-        result = SMCCall(KERNEL_INDEX_SMC, &inputStructure, &outputStructure, conn);
+        result = SMCCallConn(KERNEL_INDEX_SMC, &inputStructure, &outputStructure, conn);
         if (result == kIOReturnSuccess)
         {
             *keyInfo = outputStructure.keyInfo;
@@ -194,7 +194,7 @@ kern_return_t SMCReadKeyWithConn(UInt32Char_t key, SMCVal_t *val,io_connect_t co
     inputStructure.keyInfo.dataSize = val->dataSize;
     inputStructure.data8 = SMC_CMD_READ_BYTES;
     
-    result = SMCCall(KERNEL_INDEX_SMC, &inputStructure, &outputStructure,conn);
+    result = SMCCallConn(KERNEL_INDEX_SMC, &inputStructure, &outputStructure,conn);
     if (result != kIOReturnSuccess)
     {
         return result;
@@ -221,7 +221,7 @@ void smc_close(){
 
 kern_return_t SMCCall(int index, SMCKeyData_t *inputStructure, SMCKeyData_t *outputStructure)
 {
-    return SMCCall(index, inputStructure, outputStructure, g_conn);
+    return SMCCallConn(index, inputStructure, outputStructure, g_conn);
 }
 
 kern_return_t SMCReadKey(UInt32Char_t key, SMCVal_t *val)
@@ -229,7 +229,7 @@ kern_return_t SMCReadKey(UInt32Char_t key, SMCVal_t *val)
     return SMCReadKeyWithConn(key, val, g_conn);
 }
 
-kern_return_t SMCWriteKey(SMCVal_t writeVal, io_connect_t conn)
+kern_return_t SMCWriteKeyConn(SMCVal_t writeVal, io_connect_t conn)
 {
     kern_return_t result;
     SMCKeyData_t  inputStructure;
@@ -251,7 +251,7 @@ kern_return_t SMCWriteKey(SMCVal_t writeVal, io_connect_t conn)
     inputStructure.data8 = SMC_CMD_WRITE_BYTES;
     inputStructure.keyInfo.dataSize = writeVal.dataSize;
     memcpy(inputStructure.bytes, writeVal.bytes, sizeof(writeVal.bytes));
-    result = SMCCall(KERNEL_INDEX_SMC, &inputStructure, &outputStructure,conn);
+    result = SMCCallConn(KERNEL_INDEX_SMC, &inputStructure, &outputStructure, conn);
     
     if (result != kIOReturnSuccess)
         return result;
@@ -260,7 +260,7 @@ kern_return_t SMCWriteKey(SMCVal_t writeVal, io_connect_t conn)
 
 kern_return_t SMCWriteKey(SMCVal_t writeVal)
 {
-    return SMCWriteKey(writeVal, g_conn);
+    return SMCWriteKeyConn(writeVal, g_conn);
 }
 
 UInt32 SMCReadIndexCount(void)
@@ -298,7 +298,6 @@ kern_return_t SMCPrintAll(void)
         _ultostr(key, outputStructure.key);
         
         SMCReadKey(key, &val);
-        printVal(val);
     }
     
     return kIOReturnSuccess;
@@ -342,12 +341,18 @@ kern_return_t SMCWriteSimple(UInt32Char_t key, char *wvalue, io_connect_t conn)
     }
     val.dataSize = i / 2;
     sprintf(val.key, key);
-    result = SMCWriteKey(val, conn);
+    result = SMCWriteKeyConn(val, conn);
     if (result != kIOReturnSuccess)
         printf("Error: SMCWriteKey() = %08x\n", result);
     
     
     return result;
+}
+
+int main(int argc, char *argv[])
+{
+    // for Makefile
+    return 0;
 }
 
 #endif //#ifdef CMD_TOOL

@@ -20,6 +20,8 @@
 		4F58667725642F4500C529B7 /* ProcessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F58667625642F4500C529B7 /* ProcessList.swift */; };
 		4F5866A025657CDC00C529B7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4F58669F25657CDC00C529B7 /* .gitignore */; };
 		4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5866A42566D8BE00C529B7 /* TemperatureView.swift */; };
+		4F5F1BF1256E45940014460B /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F1BF0256E45940014460B /* Makefile */; };
+		4F5F1BF5256E495D0014460B /* smcBinary in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F1BF3256E495D0014460B /* smcBinary */; };
 		4F7A7167255EDDB4008C6511 /* CPUHeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */; };
 		4F7A717525613B7A008C6511 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7A717425613B7A008C6511 /* Utils.swift */; };
 		4FF00D29256AD74100F9BE4F /* smcBinary.c in Sources */ = {isa = PBXBuildFile; fileRef = 4FF00D28256AD74100F9BE4F /* smcBinary.c */; };
@@ -47,6 +49,8 @@
 		4F58667625642F4500C529B7 /* ProcessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessList.swift; sourceTree = "<group>"; };
 		4F58669F25657CDC00C529B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4F5866A42566D8BE00C529B7 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		4F5F1BF0256E45940014460B /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		4F5F1BF3256E495D0014460B /* smcBinary */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = smcBinary; sourceTree = "<group>"; };
 		4F7A7166255EDDB4008C6511 /* CPUHeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUHeatView.swift; sourceTree = "<group>"; };
 		4F7A717425613B7A008C6511 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		4FF00D26256AD74100F9BE4F /* MacStats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacStats-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		4FF00D1F256AD2CF00F9BE4F /* SMC */ = {
 			isa = PBXGroup;
 			children = (
+				4F5F1BF3256E495D0014460B /* smcBinary */,
 				4FF00D26256AD74100F9BE4F /* MacStats-Bridging-Header.h */,
 				4FF00D27256AD74100F9BE4F /* smcBinary.h */,
 				4FF00D28256AD74100F9BE4F /* smcBinary.c */,
@@ -183,6 +188,7 @@
 				4FF00D30256C1A5800F9BE4F /* smcWrapper.h */,
 				4FF00D40256D4CFB00F9BE4F /* smcWrapper.m */,
 				4FF00D2B256AEF3100F9BE4F /* SMC.swift */,
+				4F5F1BF0256E45940014460B /* Makefile */,
 			);
 			path = SMC;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				4F5866A025657CDC00C529B7 /* .gitignore in Resources */,
 				4F4DEC01255A64E9007E8A37 /* Main.storyboard in Resources */,
 				4F4DEBFE255A64E9007E8A37 /* Preview Assets.xcassets in Resources */,
+				4F5F1BF5256E495D0014460B /* smcBinary in Resources */,
 				4F4DEBFB255A64E9007E8A37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF00D3A256D43EE00F9BE4F /* DirectoryLocations.m in Sources */,
+				4F5F1BF1256E45940014460B /* Makefile in Sources */,
 				4F5866A52566D8BE00C529B7 /* TemperatureView.swift in Sources */,
 				4F7A717525613B7A008C6511 /* Utils.swift in Sources */,
 				4F5866612562E0BC00C529B7 /* System.swift in Sources */,

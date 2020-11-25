@@ -252,7 +252,7 @@ io_connect_t conn;
 }
 
 + (void) setRights {
-    NSString *smcpath = [[NSBundle mainBundle]   pathForResource:@"smc" ofType:@""];
+    NSString *smcpath = [[NSBundle mainBundle]   pathForResource:@"smcBinary" ofType:@""];
     NSFileManager *fmanage=[NSFileManager defaultManager];
     NSDictionary *fdic = [fmanage attributesOfItemAtPath:smcpath error:nil];
     if ([[fdic valueForKey:@"NSFileOwnerAccountName"] isEqualToString:@"root"] && [[fdic valueForKey:@"NSFileGroupOwnerAccountName"] isEqualToString:@"admin"] && ([[fdic valueForKey:@"NSFilePosixPermissions"] intValue]==3437)) {
